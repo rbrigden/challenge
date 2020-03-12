@@ -20,8 +20,8 @@ Refer to the `visualize_detections` function to see how to easily read the video
 
 ## Solution format
 
-The solution is a `List` of `Tuple`s of `int`s, with each tuple corresponding to the 
-approximate frames (within a 0.5 second margin) at which an individual entered and exited the scene.
+The solution is of type`List[Tuple[int, int]]`, with each tuple corresponding to the 
+approximate frame indices (within a margin of 12 frames) at which an individual entered and exited the scene.
 
 For example, if 3 individuals walk through the scene in a video, a solution could look like
 
