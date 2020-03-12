@@ -13,15 +13,15 @@ These are in standard image coordinates
 To view the test video with annotated detections, run
 
 ```shell script
-python challenge/main.py visualize_detections --video data/pedestrians.mp4 --detections data/pedestrians.jsonl
+python challenge/main.py visualize-detections --video data/pedestrians.mp4 --detections data/pedestrians.jsonl
 ```
 
 Refer to the `visualize_detections` function to see how to easily read the video and detections.
 
 ## Solution format
 
-The solution is a `List` of `Tuple`s of `int`s, with each tuple corresponding to the 
-approximate frames (within a 0.5 second margin) at which an individual entered and exited the scene.
+The solution is of type`List[Tuple[int, int]]`, with each tuple corresponding to the 
+approximate frame indices (within a margin of 12 frames) at which an individual entered and exited the scene.
 
 For example, if 3 individuals walk through the scene in a video, a solution could look like
 
@@ -34,7 +34,7 @@ the `test` function provided in `test.py`. The `REFERENCE` list in `test.py` is 
 provided video.
 
 Once you are satisfied with the performance of your solution, ensure that the following command successfully 
-displays the output of the `test` function when provided your solution.
+displays the output of the `test` function.
 
 ```shell script
 python challenge/main.py run --video data/pedestrians.mp4 --detections data/pedestrians.jsonl
@@ -59,6 +59,7 @@ Create a virtualenv
 virtualenv --python=python3.7 venv
 source venv/bin/activate
 pip install -r requirements.txt
+export PYTHONPATH=$PWD:$PYTHONPATH
 ```
 
 
@@ -75,7 +76,7 @@ pip install -r requirements.txt
 ## What we are looking for
 - Clear, concise code
 - Robust solutions over clever tricks (we like clever, but not if it might only work on this single test case)
-- An insightful discussion in `DISCUSSION.md`, especially if your solutions performance is l
+- An insightful discussion in `DISCUSSION.md`. 
 - [OPTIONAL] a visualization of your solution. we have provided a function template called `visualize_solution`
 
 ## Tips
