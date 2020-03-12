@@ -34,7 +34,7 @@ the `test` function provided in `test.py`. The `REFERENCE` list in `test.py` is 
 provided video.
 
 Once you are satisfied with the performance of your solution, ensure that the following command successfully 
-displays the output of the `test` function when provided your solution.
+displays the output of the `test` function.
 
 ```shell script
 python challenge/main.py run --video data/pedestrians.mp4 --detections data/pedestrians.jsonl
@@ -76,7 +76,7 @@ export PYTHONPATH=$PWD:$PYTHONPATH
 ## What we are looking for
 - Clear, concise code
 - Robust solutions over clever tricks (we like clever, but not if it might only work on this single test case)
-- An insightful discussion in `DISCUSSION.md`, especially if your solutions performance is l
+- An insightful discussion in `DISCUSSION.md`. 
 - [OPTIONAL] a visualization of your solution. we have provided a function template called `visualize_solution`
 
 ## Tips
