@@ -13,7 +13,7 @@ These are in standard image coordinates
 To view the test video with annotated detections, run
 
 ```shell script
-python challenge/main.py visualize_detections --video data/pedestrians.mp4 --detections data/pedestrians.jsonl
+python challenge/main.py visualize-detections --video data/pedestrians.mp4 --detections data/pedestrians.jsonl
 ```
 
 Refer to the `visualize_detections` function to see how to easily read the video and detections.
@@ -59,6 +59,7 @@ Create a virtualenv
 virtualenv --python=python3.7 venv
 source venv/bin/activate
 pip install -r requirements.txt
+export PYTHONPATH=$PWD:$PYTHONPATH
 ```
 
 
